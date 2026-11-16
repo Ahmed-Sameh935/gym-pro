@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gym Pro</title>
+<meta name="description" content="Your gym logbook: the last weight, reps and sets for every exercise.">
+<meta name="theme-color" content="#232842">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Gym Pro">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" id="fonts" crossorigin href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="view" tabindex="-1"></main>
+
+<nav class="tabs" aria-label="Sections">
+  <a href="#/" data-tab="home">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M6 8v8M18 8v8M9 6v12M15 6v12"/></svg>
+    <span>Muscles</span>
+  </a>
+  <a href="#/history" data-tab="history">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v15H5zM5 10h14M9 3v4M15 3v4"/></svg>
+    <span>History</span>
+  </a>
+  <a href="#/settings" data-tab="settings">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg>
+    <span>Backup</span>
+  </a>
+</nav>
+
+<dialog id="sheet" aria-labelledby="sheet-title">
+  <form method="dialog" id="sheet-form">
+    <h2 id="sheet-title"></h2>
+    <div id="sheet-fields"></div>
+    <div class="sheet-actions">
+      <button type="submit" class="btn primary" value="ok" id="sheet-ok">Save</button>
+      <button type="button" class="btn quiet" id="sheet-cancel">Cancel</button>
+      <button type="button" class="btn danger" id="sheet-delete" hidden>Delete</button>
+    </div>
+  </form>
+</dialog>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="seed.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
